@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leah Muchiri - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 z-50 py-4 px-6 flex justify-between items-center shadow-lg">
+        <!-- <div class="text-2xl font-bold text-green-500">Leah Muchiri</div> -->
+        <div class="flex items-center">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/logo.png" alt="Leah Muchiri Logo" class="h-8 md:h-10 w-auto object-contain">
+            </div>
+        
+        </div>
+        
+        <div class="space-x-6 hidden md:flex">
+            <a href="#home" class="nav-link transition-colors">Home</a>
+            <a href="#about" class="nav-link transition-colors">About</a>
+            <a href="#education" class="nav-link transition-colors">Education</a>
+            <a href="#skills" class="nav-link transition-colors">Skills</a>
+            <a href="#interests" class="nav-link transition-colors">Interests</a>
+            <a href="#portfolio" class="nav-link transition-colors">Portfolio</a>
+            <a href="#contact" class="nav-link transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden text-green-500" onclick="toggleMenu()">☰</button>
+    </nav> 
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-16 w-full bg-gray-900 p-4 md:hidden">
+        <a href="#home" class="block py-2 nav-link">Home</a>
+        <a href="#about" class="block py-2 nav-link">About</a>
+        <a href="#education" class="block py-2 nav-link">Education</a>
+        <a href="#skills" class="block py-2 nav-link">Skills</a>
+        <a href="#interests" class="block py-2 nav-link">Interests</a>
+        <a href="#portfolio" class="block py-2 nav-link">Portfolio</a>
+        <a href="#contact" class="block py-2 nav-link">Contact</a>
+    </div>
+    <br><br>
+
+    <!-- Home Section with Image -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-40 fade-in">
+            <div class="text-center md:text-left md:w-1/2">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">Hey, I'm Leah Muchiri</h1>
+                <p class="text-xl text-gray-400 mb-6">Fullstack Web Developer | future software engineer</p>
+                <a href="#portfolio" class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-full transition-colors">Explore My Work</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="assets/me.jpeg" class="w-full rounded border-4 border-green-500 shadow-lg" style="max-width: 300px; height: auto;" alt="Leah Muchiri">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto fade-in">
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/3">
+                    <img src="assets/lap1.jpg" class="w-full rounded-full border-4 border-green-500 shadow-lg" style="max-width: 350px; height: auto;" alt="Leah Muchiri">
+                </div>
+                <div class="lg:w-2/3 text-gray-300">
+                    <h2 class="text-3xl font-bold text-green-500 mb-4">Fullstack Web Developer</h2>
+                    <p class="italic mb-4">I'm Leah Muchiri, a passionate UI/UX designer and web developer with a keen eye for clean, user-centered design. I specialize in creating websites that are visually appealing, functional, and responsive.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <ul class="space-y-2">
+                            <li><strong>Birthday:</strong> 23 May 2003</li>
+                            <li><strong>Website:</strong> essyproperties.com</li>
+                            <li><strong>Phone:</strong> +254 795121727</li>
+                            <li><strong>City:</strong> Nairobi, Kenya</li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li><strong>Age:</strong> 21</li>
+                            <li><strong>Degree:</strong> Undergraduate</li>
+                            <li><strong>Email:</strong> lishyamuchiri@gmail.com</li>
+                        </ul>
+                    </div>
+                    <p>I’m a fourth-year university student aiming to become a full-stack developer. I love solving complex problems through technology and enhancing user experiences with innovative designs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <!-- Page Title -->
+<div class="page-title bg-gray-900 py-10" data-aos="fade">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-green-500 mb-4">My Resume</h1>
+        <p class="text-lg text-gray-300 mb-6">
+          A web developer passionate about building interactive and user-friendly applications. Experienced in front-end and back-end technologies, and continuously improving my skills to bring ideas to life.
+        </p>
+        <a href="assets/muchiri leah Cv.pdf" download="Leah_Muchiri_CV.pdf" 
+           class="btn bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition duration-300">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+  
+   <!-- Resume Section -->
+   <section id="resume" class="resume py-16 bg-gray-900">
+    <div class="container mx-auto">
+        <!-- Timeline -->
+        <div class="timeline space-y-10">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-content bg-gray-800 p-6 rounded shadow-lg" data-aos="fade-left">
+                    <h3 class="resume-title text-xl font-bold text-green-500 mb-2">Summary</h3>
+                    <h4 class="text-lg font-semibold text-white">Leah Muchiri</h4>
+                    <p class="text-gray-300 italic mb-4">
+                        Innovative front-end web developer with a passion for design and creating interactive web applications. Focused on building responsive, user-centric websites and applications, and continuously enhancing my skills in full-stack development.
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-400 space-y-1">
+                        <li>Nairobi, Kenya</li>
+                        <li>(123) 456-7890</li>
+                        <li>leah.muchiri@email.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-content bg-gray-800 p-6 rounded shadow-lg" data-aos="fade-right">
+                    <h3 class="resume-title text-xl font-bold text-green-500 mb-2">Education</h3>
+                    <h4 class="text-lg font-semibold text-white">Bachelor of Science in Information Technology</h4>
+                    <h5 class="text-sm text-gray-400 mb-2">2021 - 2025</h5>
+                    <p><em>Meru University of Science and Technology</em></p>
+                    <p>Specialized in web development and software engineering with hands-on experience in modern technologies like Django, Bootstrap, and CSS.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-content bg-gray-800 p-6 rounded shadow-lg" data-aos="fade-right">
+                    <h3 class="resume-title text-xl font-bold text-green-500 mb-2">Professional Experience</h3>
+                    <h4 class="text-lg font-semibold text-white">Front-End Web Developer</h4>
+                    <h5 class="text-sm text-gray-400 mb-2">2023 - Present</h5>
+                    <p><em>lishya techs, Nairobi, Kenya</em></p>
+                    <ul class="list-disc pl-5 text-gray-400 space-y-1">
+                        <li>Developed responsive websites using HTML5, CSS, and Bootstrap.</li>
+                        <li>Collaborated with design and back-end teams to improve functionality and user experience.</li>
+                        <li>Optimized web pages for speed and SEO.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-content bg-gray-800 p-6 rounded shadow-lg" data-aos="fade-left">
+                    <h3 class="resume-title text-xl font-bold text-green-500 mb-2">Graphic Designer</h3>
+                    <h4 class="text-lg font-semibold text-white">Self-employed, Nairobi, Kenya</h4>
+                    <h5 class="text-sm text-gray-400 mb-2">2021 - 2023</h5>
+                    <ul class="list-disc pl-5 text-gray-400 space-y-1">
+                        <li>Developed custom websites and web applications for clients using Django.</li>
+                        <li>Created restaurant websites, portfolio websites, and business applications.</li>
+                        <li>Provided ongoing maintenance and troubleshooting support for client websites.</li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- End Timeline -->
+    </div> <!-- End Container -->
+</section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto fade-in">
+            <div class="section-title">
+                <h2>Features</h2>
+                <div>I'M INTERESTED IN</div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="features-item">
+                    <i class="bi bi-laptop" style="color: #1a60a6;"></i>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-arrow-right-circle" style="color: #5578ff;"></i>
+                    <h3>UX/UI Design</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-file-earmark-code" style="color: #e80368;"></i>
+                    <h3>Full-stack Development</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-lightbulb" style="color: #e361ff;"></i>
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-link" style="color: #47aeff;"></i>
+                    <h3>Learning New Tech</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-camera" style="color: #ffa76e;"></i>
+                    <h3>Photography</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-map" style="color: #4233ff;"></i>
+                    <h3>Travelling</h3>
+                </div>
+                <div class="features-item">
+                    <i class="bi bi-gear" style="color: #b2904f;"></i>
+                    <h3>Problem Solving</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-500">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-colors">
+                    <img src="assets/restaurant.png" class="w-full h-48 object-cover" alt="Restaurant">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-green-500">Restaurant</h3>
+                        <p class="text-gray-400">A beautifully designed website for a local restaurant.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-colors">
+                    <img src="assets/propertiees.png" class="w-full h-48 object-cover" alt="Essy Properties">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-green-500">Essy Properties</h3>
+                        <p class="text-gray-400">A real estate website designed for Essy Properties.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-colors">
+                    <img src="assets/medisync.png" class="w-full h-48 object-cover" alt="Medisync">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-green-500">Medisync</h3>
+                        <p class="text-gray-400">Branding for Medisync using Django.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-colors">
+                    <img src="assets/potfoli.png" class="w-full h-48 object-cover" alt="Portfolio">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-green-500">Portfolio</h3>
+                        <p class="text-gray-400">A sample portfolio to showcase my friend’s skills.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-colors">
+                    <img src="assets/project1.png" class="w-full h-48 object-cover" alt="VoyajeVista">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-green-500">VoyajeVista</h3>
+                        <p class="text-gray-400">A travel website to discover destinations and plan trips.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-colors">
+                    <img src="assets/birtsample.png" class="w-full h-48 object-cover" alt="Birthday Post">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-green-500">Birthday Post</h3>
+                        <p class="text-gray-400">A customized birthday post for social media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-900">
+        <div class="max-w-md mx-auto fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-500">Contact Me</h2>
+            <form class="space-y-6" id="contact-form">
+                <input type="text" placeholder="Name" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <input type="email" placeholder="Email" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <textarea placeholder="Message" rows="4" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg transition-colors">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer id="footer" class="footer dark-background">
+    <div class="container">
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/lishyamuchiri"><i class="bi bi-github "></i></a>
+            <a href="linkedin.com/in/lishya-muchiri-849b91268"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/0795121727"><i class="bi bi-whatsapp"></i></a>
+            <a href=" https://www.facebook.com/share/Cata9W3QGJE9qimY/"><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+        </div>
+        <hr>
+        <div class="copyright-credits-container">
+            <div class="copyright" >
+                <span>Copyright All Rights Reserved </span>
+            </div>
+            <div class="credits">
+                <p>Designed by Leah Muchiri</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+      </footer>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
+
+
+
