@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Leah Muchiri - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,19 +25,19 @@
         <div class="flex items-center">
             <!-- Logo -->
             <div class="logo">
-                <img src="./pages/assets/logo.png" alt="Leah Muchiri Logo" class="h-8 md:h-10 w-auto object-contain">
+               <h1 class="text-green-700 text-2xl">leah muchiri</h1>
             </div>
         
         </div>
         
         <div class="space-x-6 hidden md:flex">
-            <a href="#home" class="nav-link transition-colors">Home</a>
-            <a href="#about" class="nav-link transition-colors">About</a>
-            <a href="#education" class="nav-link transition-colors">Education</a>
-            <a href="#skills" class="nav-link transition-colors">Skills</a>
-            <a href="#interests" class="nav-link transition-colors">Interests</a>
-            <a href="#portfolio" class="nav-link transition-colors">Portfolio</a>
-            <a href="#contact" class="nav-link transition-colors">Contact</a>
+            <a href="#home" class="nav-link transition-colors  active">Home</a>
+            <a href="#about" class="nav-link transition-colors  active">About</a>
+            <a href="#resume" class="nav-link transition-colors  active">Education</a>
+            <!-- <a href="#skills" class="nav-link transition-colors active">Skills</a> -->
+            <a href="#interests" class="nav-link transition-colors active">Interests</a>
+            <a href="#portfolio" class="nav-link transition-colors active">Portfolio</a>
+            <a href="#contact" class="nav-link transition-colors active">Contact</a>
         </div>
         <button class="md:hidden text-green-500" onclick="toggleMenu()">☰</button>
     </nav> 
@@ -46,17 +46,18 @@
     <div id="mobile-menu" class="hidden fixed top-16 w-full bg-gray-900 p-4 md:hidden">
         <a href="#home" class="block py-2 nav-link">Home</a>
         <a href="#about" class="block py-2 nav-link">About</a>
-        <a href="#education" class="block py-2 nav-link">Education</a>
-        <a href="#skills" class="block py-2 nav-link">Skills</a>
+        <a href="#resume" class="block py-2 nav-link">Education</a>
+        <!-- <a href="#skills" class="block py-2 nav-link">Skills</a> -->
         <a href="#interests" class="block py-2 nav-link">Interests</a>
         <a href="#portfolio" class="block py-2 nav-link">Portfolio</a>
         <a href="#contact" class="block py-2 nav-link">Contact</a>
     </div>
     <br><br>
 
+    <header class="flex-row">
     <!-- Home Section with Image -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-40 fade-in">
+    <section id="home" class="min-h-screen flex flex-row items-center justify-center px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-6xl mx-auto flex flex-row md:flex-row items-center gap-40 fade-in">
             <div class="text-center md:text-left md:w-1/2">
                 <h1 class="text-5xl md:text-7xl font-bold mb-4">Hey, I'm Leah Muchiri</h1>
                 <p class="text-xl text-gray-400 mb-6">Fullstack Web Developer | future software engineer</p>
@@ -67,16 +68,23 @@
             </div>
         </div>
     </section>
+</header>
 
+    <main class="overflow-hidden "></main>
     <!-- About Section -->
     <section id="about" class="py-20 px-6">
+        <div class="text-center">
+        <h1 class="text-3xl font-bold text-green-500 ">About Me</h1> <br><br>
+    </div>
         <div class="max-w-6xl mx-auto fade-in">
             <div class="flex flex-col lg:flex-row items-center gap-8">
                 <div class="lg:w-1/3">
                     <img src="./pages/assets/lap1.jpg" class="w-full rounded-full border-4 border-green-500 shadow-lg" style="max-width: 350px; height: auto;" alt="Leah Muchiri">
                 </div>
                 <div class="lg:w-2/3 text-gray-300">
-                    <h2 class="text-3xl font-bold text-green-500 mb-4">Fullstack Web Developer</h2>
+                   
+                
+                    <h2 class="text-3xl font-bold text-green-700 mb-4">Fullstack Web Developer</h2>
                     <p class="italic mb-4">I'm Leah Muchiri, a passionate UI/UX designer and web developer with a keen eye for clean, user-centered design. I specialize in creating websites that are visually appealing, functional, and responsive.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <ul class="space-y-2">
@@ -99,6 +107,7 @@
 
     <!-- Education Section -->
     <!-- Page Title -->
+    <section id="resume" class="resume py-16 bg-gray-900">
 <div class="page-title bg-gray-900 py-10" data-aos="fade">
     <div class="container mx-auto">
       <div class="text-center">
@@ -117,7 +126,7 @@
 
   
    <!-- Resume Section -->
-   <section id="resume" class="resume py-16 bg-gray-900">
+  
     <div class="container mx-auto">
         <!-- Timeline -->
         <div class="timeline space-y-10">
@@ -225,7 +234,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-6">
+    <section id="portfolio" class="py-10 px-6">
         <div class="max-w-6xl mx-auto fade-in">
             <h2 class="text-4xl font-bold text-center mb-12 text-green-500">Portfolio</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -287,6 +296,7 @@
             </form>
         </div>
     </section>
+</main>
 
     <!-- Footer -->
     <!-- Footer -->
@@ -311,7 +321,7 @@
     </div>
 </footer>
 
-      </footer>
+      
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./pages/js/main.js"></script>
 </body>
