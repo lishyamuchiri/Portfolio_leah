@@ -20,39 +20,42 @@
     
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-gray-900/95 z-50 py-4 px-6 flex justify-between items-center shadow-lg">
-        <!-- <div class="text-2xl font-bold text-green-500">Leah Muchiri</div> -->
-        <div class="flex items-center">
-            <!-- Logo -->
-            <div class="logo">
-               <h1 class="text-green-700 text-2xl">leah muchiri</h1>
-            </div>
-        
+    <nav class="fixed top-0 w-full bg-gray-900/95 z-99 py-4 px-6 flex justify-between items-center shadow-lg">
+    <div class="flex items-center">
+        <div class="logo">
+            <h1 class="text-green-700 text-2xl">leah muchiri</h1>
         </div>
-        
-        <div class="space-x-6 hidden md:flex " >
-            <a href="#home" class="nav-link transition-colors  active">Home</a>
-            <a href="#about" class="nav-link transition-colors  active">About</a>
-            <a href="#resume" class="nav-link transition-colors  active">Education</a>
-            <!-- <a href="#skills" class="nav-link transition-colors active">Skills</a> -->
-            <a href="#interests" class="nav-link transition-colors active">Interests</a>
-            <a href="#portfolio" class="nav-link transition-colors active">Portfolio</a>
-            <a href="#contact" class="nav-link transition-colors active">Contact</a>
-        </div>
-        <button class="md:hidden text-green-500" onclick="toggleMenu()">☰</button>
-    </nav> 
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed top-16 w-full bg-gray-900 p-4 md:hidden">
-        <a href="#home" class="block py-2 nav-link">Home</a>
-        <a href="#about" class="block py-2 nav-link">About</a>
-        <a href="#resume" class="block py-2 nav-link">Education</a>
-        <!-- <a href="#skills" class="block py-2 nav-link">Skills</a> -->
-        <a href="#interests" class="block py-2 nav-link">Interests</a>
-        <a href="#portfolio" class="block py-2 nav-link">Portfolio</a>
-        <a href="#contact" class="block py-2 nav-link">Contact</a>
     </div>
+    
+    <!-- Desktop Navigation -->
+    <div class="space-x-6 hidden md:flex">
+        <a href="#home" class="nav-link transition-colors active">Home</a>
+        <a href="#about" class="nav-link transition-colors">About</a>
+        <a href="#resume" class="nav-link transition-colors">Education</a>
+        <a href="#interests" class="nav-link transition-colors">Interests</a>
+        <a href="#portfolio" class="nav-link transition-colors">Portfolio</a>
+        <a href="#contact" class="nav-link transition-colors">Contact</a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-green-500 focus:outline-none" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-gray-900 z-40">
+    <a href="#home" class="block py-3 px-4 text-white hover:bg-gray-800">Home</a>
+    <a href="#about" class="block py-3 px-4 text-white hover:bg-gray-800">About</a>
+    <a href="#resume" class="block py-3 px-4 text-white hover:bg-gray-800">Education</a>
+    <a href="#interests" class="block py-3 px-4 text-white hover:bg-gray-800">Interests</a>
+    <a href="#portfolio" class="block py-3 px-4 text-white hover:bg-gray-800">Portfolio</a>
+    <a href="#contact" class="block py-3 px-4 text-white hover:bg-gray-800">Contact</a>
+</div>
     <br><br>
+    
 
     <header class="flex-row">
     <!-- Home Section with Image -->

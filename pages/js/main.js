@@ -1,11 +1,16 @@
 // Mobile menu toggle - improved version
 function toggleMenu() {
+    console.log('Menu toggled');
     const menu = document.getElementById('mobile-menu');
-    const body = document.body;
-    
-    // Use classList.toggle for simpler code
-    menu.classList.toggle('hidden');
-    body.classList.toggle('menu-open');
+    menu.classList.toggle('show'); // Use 'show' class to control visibility
+    document.body.classList.toggle('menu-open');
+
+    // Add this to your JS
+document.documentElement.style.setProperty(
+    '--nav-height', 
+    `${document.querySelector('nav').offsetHeight}px`
+  );
+
 }
 
 // Single event listener for mobile menu links

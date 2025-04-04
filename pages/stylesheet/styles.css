@@ -1,7 +1,9 @@
 :root {
     --nav-height: 4rem;
   }
- 
+  nav {
+    height: var(--nav-height);
+}
   html {
     height: 100%;
     scroll-behavior: smooth;
@@ -17,21 +19,39 @@
     margin-left: auto;
   }  
 
+
 /* Mobile Menu Fixes */
 #mobile-menu {
     position: fixed;
-    top: 64px; /* Should match your nav height */
+    top: 64px; /* Adjust as needed */
     left: 0;
     right: 0;
-    z-index: 49;
-    max-height: calc(100vh - 64px);
+    z-index: 99;
+    max-height: 0; /* Initially hidden */
     overflow-y: auto;
-    display: none;
     background-color: rgba(55, 65, 81, 0.98);
-    transition: all 0.3s ease;
+    transition: max-height 0.3s ease; /* Use transition for smooth effect */
 }
 #mobile-menu.show {
+    max-height: 500px;
+}
+
+
+
+
+#mobile-menu a {
+    color: white; /* Explicitly set color */
+    padding: 12px 16px;
     display: block;
+}
+
+#mobile-menu a:hover {
+    color: #22c55e; /* Your accent color */
+    background-color: rgba(255,255,255,0.1);
+}
+
+#mobile-menu a.nav-link {
+    color: white !important; /* Force text color */
 }
 
 body.menu-open {
@@ -39,7 +59,9 @@ body.menu-open {
     position: fixed;
     width: 100%;
 }
-
+#mobile-menu {
+    border: 2px solid rgb(0, 217, 255) !important;
+}
   [data-aos] {
     transition-property: transform, opacity;
 }
@@ -466,19 +488,29 @@ section {
     width: 100%;
   }
 
-  #mobile-menu {
+  /* #mobile-menu {
     position: fixed;
-    top: 64px; /* Adjust based on your nav height */
-    left: 0;
+    top: var(--nav-height); /* Use the same variable as your nav */
+    /* left: 0;
     right: 0;
-    z-index: 49; /* Below nav but above content */
-    max-height: calc(100vh - 64px);
+    z-index: 49;
+    max-height: calc(100vh - var(--nav-height));
     overflow-y: auto;
     display: none;
-    background-color: rgba(55, 65, 81, 0.98); /* bg-gray-700 with more opacity */
+    background-color: rgba(55, 65, 81, 0.98);
     transition: all 0.3s ease;
+} */ */
+
+#mobile-menu a {
+    color: white; /* Explicitly set color */
+    padding: 12px 16px;
+    display: block;
 }
 
+#mobile-menu a:hover {
+    color: #22c55e; /* Your accent color */
+    background-color: rgba(255,255,255,0.1);
+}
 
 
 
